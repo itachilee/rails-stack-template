@@ -1,0 +1,19 @@
+<%= simple_form_for(customer, defaults: {html:{class: 'form-horizontal' },input_html:{class: 'form-control'}} ) do |f|  %>
+  <div class="form-group">
+    <%= f.input :name, label: "姓名" ,placeholder: '请输入姓名' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :address, label: "地址" %>
+  </div>
+  <div class="form-group">
+  <%= f.input :idcard, label: "证件号" %>
+  </div>
+  <div class="form-group">
+  <%= f.input :mobile, label: "手机" %>
+  </div>
+  <div class="form-group">
+  <%= f.input :remark, label: "备注" %>
+  </div>
+  <%= f.button :submit,'提交', class: 'btn btn-block btn-primary' %>
+<% end %>

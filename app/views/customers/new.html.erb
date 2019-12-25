@@ -1,0 +1,31 @@
+<div class="container-fluid page__heading-container">
+  <div class="page__heading">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a></li>
+        <li class="breadcrumb-item">客户信息</li>
+        <li class="breadcrumb-item active" aria-current="page">客户列表</li>
+      </ol>
+    </nav>
+    <h2 class="m-0">新建客户</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid page__container">
+<div class="card card-form">
+  <div class="row no-gutters">
+    <div class="col-lg-4 card-body">
+      <p><strong class="headings-color">Input Masking</strong></p>
+      <p class="text-muted">Mask your form controls depending on the context with the jQuery Mask plugin. Please read the
+        <a href="https://igorescobar.github.io/jQuery-Mask-Plugin/" target="_blank">official plugin documentation</a> for a full list of options.</p>
+    </div>
+    <div class="col-lg-8 card-form__body card-body">
+
+      <%= render 'form',customer: @customer %>
+    </div>
+  </div>
+</div>
+</div>
+<br />
+<%= link_to '返回客户信息', customers_path %>

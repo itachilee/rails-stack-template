@@ -1,0 +1,52 @@
+<div class="container-fluid page__heading-container">
+  <div class="page__heading d-flex align-items-center">
+    <div class="flex">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">客户信息</li>
+        </ol>
+      </nav>
+      <h1 class="m-0">客户列表</h1>
+    </div>
+    <%= link_to '开户', new_customer_path,class: 'btn btn-success ml-3' %>
+  </div>
+</div>
+
+<table class="table">
+  <thead>
+  <tr>
+
+    <td>姓名</td>
+    <td>地址</td>
+    <td>证件号</td>
+    <td>手机</td>
+    <td>备注</td>
+    <td>开户时间</td>
+    <td>创建者</td>
+  </tr>
+  </thead>
+  <tbody>
+  <% @customers.each do |customer| %>
+    <tr>
+
+      <td><%= customer.name %></td>
+      <td><%= customer.address %></td>
+      <td><%= customer.idcard %></td>
+      <td><%= customer.mobile %></td>
+      <td><%= customer.remark %></td>
+      <td><%= customer.created_at %></td>
+<!--      <td><%#= customer.user.email %></td>-->
+      <td>
+        <%= link_to "编辑",edit_customer_path(customer) %>
+        <%= link_to "删除" ,customer_path(customer),method:"delete",data:{confirm:"n"} %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<div class="text-center">
+  <%= link_to '首页',  customers_path %>
+  <%#= will_paginate @customers %>
+</div>
+
