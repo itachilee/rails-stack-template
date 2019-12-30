@@ -3,9 +3,15 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.5'
 
+gem 'i18n'
+gem 'jquery-rails'
 # will_paginate
 gem 'will_paginate'
 gem 'will-paginate-i18n'
+# rolify
+gem 'devise'
+gem 'rolify'
+gem 'cancancan'
 # simple_form
 gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

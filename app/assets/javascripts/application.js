@@ -33,3 +33,7 @@ drawers.forEach((drawer) => {
 
 // ENABLE TOOLTIPS
 $('[data-toggle="tooltip"]').tooltip()
+
+//= require jquery3
+//= require jquery_ujs
+//= require_tree .

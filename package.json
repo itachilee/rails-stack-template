@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "dom-factory": "1.0.0",
-    "jquery": "^3.4.0",
+    "jquery": "^3.4.1",
+    "jquery-ujs": "^1.2.2",
     "material-design-icons-iconfont": "^3.0.3",
     "material-design-kit": "^1.0.0-alpha.24",
     "popper.js": "^1.12.5",

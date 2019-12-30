@@ -18,9 +18,9 @@ module StackRails
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
 
     config.assets.precompile = ["application.es6"]
-
-
+    # config.assets.enabled = true
     config.assets.initialize_on_precompile = false
+    config.i18n.default_locale = 'zh-CN'
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading

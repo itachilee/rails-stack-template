@@ -36,10 +36,11 @@
       <td><%= customer.mobile %></td>
       <td><%= customer.remark %></td>
       <td><%= customer.created_at %></td>
-<!--      <td><%#= customer.user.email %></td>-->
+      <td><%= customer.user.email %></td>
       <td>
         <%= link_to "编辑",edit_customer_path(customer) %>
-        <%= link_to "删除" ,customer_path(customer),method:"delete",data:{confirm:"n"} %>
+        <%= link_to "删除" ,customer_path(customer),method: :delete,data:{confirm:'您确定要删除吗?'} %>
+        <%#= link_to 'delete',"customer/#{customer.id}",method: :delete %>
       </td>
     </tr>
   <% end %>

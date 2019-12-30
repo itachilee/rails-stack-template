@@ -8,7 +8,9 @@ class StackController < ApplicationController
 
     params[:page] = 'index' unless params[:page]
     # FAKE PARAMS
-    @customers = Customer.all if params[:page] = 'customers'
+    @customers = Customer.all unless params[:page] != 'customers'
+
+    # render 'customers/index'
     render 'stack/' + params[:page]
   end
 

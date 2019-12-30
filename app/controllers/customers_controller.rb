@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-
+  #
   before_action :find_customer, :authenticate_user!, only: %i[update vote destroy edit]
   def index
     @customers = Customer.all.recent.paginate(:page => params[:page], :per_page => 5)
@@ -13,7 +13,11 @@ class CustomersController < ApplicationController
 
   def create
     @customer = Customer.new(customer_params)
-   # @customer.user = current_user
+    @customer.user = current_user
+    if current_user.nil?
+      redirect_to new_user_session_path
+      return
+    end
     if @customer.save
       redirect_to customers_path, notice:'新增成功！'
     else
